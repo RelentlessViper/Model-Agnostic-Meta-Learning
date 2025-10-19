@@ -60,7 +60,7 @@ class FOMAML(nn.Module):
             Tensor with shape (batch_size, self.out_shape)
         """
 
-        assert len(x.shape) == 2 and x.shape[1] == self.in_shape, (
+        assert x.ndim == 2 and x.shape[1] == self.in_shape, (
             "Input tensor must have a shape: (batch_size, self.in_shape)"
         )
 
